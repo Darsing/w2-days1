@@ -1,6 +1,6 @@
+/* ************** index.html ************************* */
 
-
-input + label{
+/* input + label{
     color: blue;
 }
 
@@ -36,5 +36,77 @@ ul li:nth-child(2){
     bottom: 0;
     right: 0;
     z-index: -1;
-} */
+} */ 
+
+/* ******** style for main.html *********** */
+
+
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.song-card{
+   width: 280px;
+   height: 350px;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 1px 5px rgba(0, 0,0, 0.25);
+   transition: box-shadow 200ms;
+   position: relative;
+   
+}
+
+.song-card::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top,black 0%, transparent 40%);
+    z-index: 1;
+}
+
+.song-card .song-card-image{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+
+.song-card:hover{
+    box-shadow: 0 6px 20px rgba(0, 0,0, 0.35);
+}
+
+.song-card-info{
+    position: absolute;
+    bottom:150px;
+    left:0px; 
+    right: 0px;
+    text-align: center;
+    padding: 5px 10px; 
+    color: white;
+    z-index: 5;  
+}
+
+.song-card-artist{
+font-size: 1rem ;
+font-weight: bold;
+line-height: 1.2rem;
+}
+
+.song-card-album{
+font-size: 0.7rem;
+line-height: 1rem;
+}
+
+.song-card-title{
+    font-size: 1.5rem;
+    line-height: 1.3rem;
+}
+
+
 
